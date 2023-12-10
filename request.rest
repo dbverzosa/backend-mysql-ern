@@ -1,0 +1,131 @@
+//USERS
+//create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+
+{
+    "name" : "Debby Bordario Verzosa",
+    "email" : "debbverzosa@gmail.com",
+    "password" : "debs123",
+    "confPassword": "debs123",
+    "role": "manufacturer",
+    "phone": "09194567568",
+    "location": "Cebu",
+    "image": "img-url"
+}
+
+###
+//get all users
+GET http://localhost:5000/users
+
+
+
+###
+//get user by ID
+GET http://localhost:5000/users/0ac6a49c-df4c-4b50-ab30-7c5cbb401865
+
+
+
+
+###
+//update user
+PATCH http://localhost:5000/users/0ac6a49c-df4c-4b50-ab30-7c5cbb401865
+Content-Type: application/json
+
+{
+    "name": "Debby Verzosa",
+    "email": "dbverzosa@gmail.com",
+    "password": "debs123",
+    "confPassword": "debs123",
+    "role": "admin",
+    "phone": "09561234598",
+    "location": "Butuan",
+    "image": "images-url"
+}
+
+
+###
+// delete a user
+DELETE http://localhost:5000/users/0a97a76e-7150-4d35-9894-ecec5009d3ac
+
+
+
+###
+//login a user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dbverzosa@gmail.com",
+    "password": "debs123"
+}
+
+
+###
+//me user
+GET http://localhost:5000/me
+
+
+
+###
+// logout  the me user
+DELETE http://localhost:5000/logout
+
+
+
+
+//VEHICLES
+###
+//get all vehicles
+GET http://localhost:5000/vehicles
+
+
+###
+//get single vehicle
+GET http://localhost:5000/vehicles/5
+
+
+
+###
+// create data Vehicle
+POST http://localhost:5000/vehicles
+Content-Type: application/json
+
+{
+   "brand": "Toyota",
+   "model": "Corolla",
+   "color": "Silver",
+   "variant": "SE",
+   "body": "Sedan",
+   "price": 25000,
+   "status": "Available",
+   "image1": "toyota_corolla_silver_1.jpg",
+   "image2": "toyota_corolla_silver_2.jpg",
+   "image3": "toyota_corolla_silver_3.jpg"
+}
+
+
+###
+// update data Vehicle
+PATCH http://localhost:5000/vehicles/5
+Content-Type: application/json
+
+{
+  "brand": "Audi",
+   "model": "Q5",
+   "color": "White",
+   "variant": "Premium Plus",
+   "body": "SUV",
+   "price": 55000,
+   "status": "Available",
+   "image1": "audi_q5_white_1.jpg",
+   "image2": "audi_q5_white_2.jpg",
+   "image3": "audi_q5_white_3.jpg"
+}
+
+###
+// delete data Vehicle
+DELETE http://localhost:5000/vehicles/5
+
+
